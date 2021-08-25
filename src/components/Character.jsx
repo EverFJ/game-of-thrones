@@ -3,7 +3,13 @@ import React from "react";
 class Character extends React.Component {
   render() {
     return (
-      <div className="character">
+      <div
+        className={
+          this.props.favorites.includes(this.props.name)
+            ? "character-favorite"
+            : "character"
+        }
+      >
         <img src={this.props.image} alt="" />
         <h2>{this.props.name}</h2>
         <p>{this.props.title}</p>

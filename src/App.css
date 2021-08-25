@@ -19,18 +19,29 @@ h1 {
     justify-content: center;
 }
 
-.character button {
+.character button,
+.character-favorite button {
     background-color: rgb(28, 95, 182);
     color: white;
     border: #aaa;
     padding: 10px;
 }
 
-.character img {
+img {
     width: 250px;
 }
 
 .character {
+    margin: 20px 15px;
+    text-align: center;
+    border: #bbb;
+    box-shadow: 0 2px 3px #bbb;
+    width: 40%;
+    padding: 20px;
+}
+
+.character-favorite {
+    background-color: rgba(25, 95, 182, 0.4);
     margin: 20px 15px;
     text-align: center;
     border: #bbb;

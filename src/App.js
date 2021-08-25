@@ -49,6 +49,7 @@ class App extends React.Component {
                 key={elem.id}
                 title={elem.title}
                 image={elem.imageUrl}
+                favorites={this.state.favorites}
                 onClick={this.handleFavoriteClick}
               />
             );
