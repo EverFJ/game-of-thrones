@@ -22,17 +22,24 @@ class App extends React.Component {
   }
 
   render() {
-    console.log("characters", this.state.characters);
+    // console.log("characters", this.state.characters);
+    // console.log("favorites", this.state.favorites);
     return (
       <>
         <h1>Game of thrones</h1>
+        <p>Favorite characters : {this.state.favorites.join(", ")}</p>
+
         {this.state.characters.map((elem) => {
           return (
-            <Character
-              name={elem.fullName}
-              title={elem.title}
-              image={elem.imageUrl}
-            />
+            <div className="grid">
+              <Character
+                name={elem.fullName}
+                key={elem.id}
+                title={elem.title}
+                image={elem.imageUrl}
+                onClick={this.handleFavoriteClick}
+              />
+            </div>
           );
         })}
       </>
