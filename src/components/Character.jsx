@@ -6,7 +6,7 @@ class Character extends React.Component {
       <div
         className={
           this.props.favorites.includes(this.props.name)
-            ? "character-favorite"
+            ? "character favorite"
             : "character"
         }
       >

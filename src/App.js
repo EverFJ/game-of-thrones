@@ -21,6 +21,10 @@ class App extends React.Component {
   handleFavoriteClick = (char) => {
     if (!this.state.favorites.includes(char)) {
       this.setState({ favorites: [...this.state.favorites, char] });
+    } else {
+      const favorites = this.state.favorites.slice();
+      favorites.splice(favorites.indexOf(char), 1);
+      this.setState({ favorites: favorites });
     }
   };
 
@@ -63,7 +67,7 @@ class App extends React.Component {
     const continent = (
       <>
         {this.state.continent.map((elem) => {
-          return <Continent name={elem.name} />;
+          return <Continent name={elem.name} key={elem.id} />;
         })}
       </>
     );
