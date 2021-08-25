@@ -14,12 +14,17 @@ class Character extends React.Component {
         <h2>{this.props.name}</h2>
         <p>{this.props.title}</p>
         <button
+          className={
+            this.props.favorites.includes(this.props.name) ? "remove" : "add"
+          }
           type="button"
           onClick={() => {
             this.props.onClick(this.props.name);
           }}
         >
-          Add to favorites
+          {this.props.favorites.includes(this.props.name)
+            ? "Remove from favorites"
+            : "Add to favorites"}
         </button>
         <br />
       </div>

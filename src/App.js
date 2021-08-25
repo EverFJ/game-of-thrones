@@ -19,7 +19,9 @@ class App extends React.Component {
   };
 
   handleFavoriteClick = (char) => {
-    this.setState({ favorites: [...this.state.favorites, char] });
+    if (!this.state.favorites.includes(char)) {
+      this.setState({ favorites: [...this.state.favorites, char] });
+    }
   };
 
   componentDidMount() {

@@ -19,9 +19,15 @@ h1 {
     justify-content: center;
 }
 
-.character button,
-.character-favorite button {
+.add {
     background-color: rgb(28, 95, 182);
+    color: white;
+    border: #aaa;
+    padding: 10px;
+}
+
+.remove {
+    background-color: red;
     color: white;
     border: #aaa;
     padding: 10px;
@@ -36,7 +42,7 @@ img {
     text-align: center;
     border: #bbb;
     box-shadow: 0 2px 3px #bbb;
-    width: 40%;
+    width: 45%;
     padding: 20px;
 }
 
@@ -46,7 +52,7 @@ img {
     text-align: center;
     border: #bbb;
     box-shadow: 0 2px 3px #bbb;
-    width: 40%;
+    width: 45%;
     padding: 20px;
 }
 
