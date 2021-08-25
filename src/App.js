@@ -4,6 +4,17 @@ import TabButton from "./components/TabButton";
 import Continent from "./components/Continent";
 import "./App.css";
 
+const characterPerso = {
+  id: "0",
+  firstName: "Arya",
+  lastName: "Stark",
+  fullName: "Arya Stark",
+  title: "No One",
+  family: "House Stark",
+  image: "arya-stark.jpg",
+  imageUrl: "https://thronesapi.com/assets/images/arya-stark.jpg",
+};
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -36,6 +47,22 @@ class App extends React.Component {
     fetch("https://thronesapi.com/api/v2/Continents")
       .then((result) => result.json())
       .then((result) => this.setState({ continent: result }));
+
+    fetch("/echo/json/", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+
+      method: "POST",
+      body: JSON.stringify(characterPerso),
+    })
+      .then(function (res) {
+        console.log(res);
+      })
+      .catch(function (res) {
+        console.log(res);
+      });
   }
 
   render() {
