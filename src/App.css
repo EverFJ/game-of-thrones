@@ -1,16 +1,29 @@
-h1,
-p {
+h1 {
     text-align: center;
+}
+
+.favorites {
+    text-align: center;
+    border: #aaa;
+    box-shadow: 0 2px 3px #bbb;
+    padding: 10px;
+    margin: 20px 15px;
+    /* width: 80%;
+    margin: auto; */
 }
 
 .grid {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .character button {
     background-color: rgb(28, 95, 182);
     color: white;
     border: #aaa;
+    padding: 10px;
 }
 
 .character img {

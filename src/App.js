@@ -27,7 +27,9 @@ class App extends React.Component {
     return (
       <>
         <h1>Game of thrones</h1>
-        <p>Favorite characters : {this.state.favorites.join(", ")}</p>
+        <p className="favorites">
+          Favorite characters : {this.state.favorites.join(", ")}
+        </p>
 
         {this.state.characters.map((elem) => {
           return (
