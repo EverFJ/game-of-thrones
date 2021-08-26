@@ -48,11 +48,11 @@ class App extends React.Component {
       .then((result) => result.json())
       .then((result) => this.setState({ continent: result }));
 
-    fetch("/echo/json/", {
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
+    fetch("https://thronesapi.com/api/v2/Characters", {
+      // headers: {
+      //   Accept: "application/json",
+      //   "Content-Type": "application/json",
+      // },
 
       method: "POST",
       body: JSON.stringify(characterPerso),
